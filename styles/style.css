@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap");
+:root {
+  --color0: white;
+  --color1: #010101;
+  --color2: #D56756;
+}
+
+@font-face {
+  font-family: NeueMontreal-bold;
+  src: url(NeueMontreal-Bold.otf);
+  /* font-weight: 700; */
+}
+
+@font-face {
+  font-family: NeueMontreal-regular;
+  src: url(NeueMontreal-Regular.otf);
+  /* font-weight: 700; */
+}
+
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  margin: 0 0;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: #FEDEC0;
+}
+
+::selection {
+  background: #FEDEC0;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+
+#bg-container, #content {
+  display: block;
+  height:320px;
+  background-color:
+  var(--color0);
+}
+
+#bg-container {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color1);
+  overflow: hidden;
+}
+
+#bg-container #bg {
+  /* margin-left: 2vw; */
+  background-image: url(imgs/home-bg.svg);
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+
+  transition: ease 0.5s;
+  
+
+  border: 0;
+  -o-border-image: none;
+      border-image: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, calc(var(--scroll) * 3), 0, 1); */
+}
+
+#homee {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+ supported by Chrome, Edge, Opera and Firefox */
+}
+
+#titles {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:88%;
+  color: white;
+  font-family: NeueMontreal-bold, sans-serif;
+  /* position: fixed;
+  /* mix-blend-mode: difference; */
+}
+
+#title {
+  font-weight: 700;
+  font-size: 8em;
+  text-transform: lowercase;
+  line-height: 95%;
+
+  transition: 1s;
+}
+
+#subtitle {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-family: NeueMontreal-regular, sans-serif;
+  text-shadow: none;
+
+  transition: 1s;
+}
+
+#bg-container {
+  
+  position: fixed;
+}
+
+#bg-container #scrolldown {
+  position: absolute;
+  bottom: 40px;
+  left: 6%;
+  width: 30px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+ supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+#content {
+  display: block;
+  height: auto;
+  background-color: var(--color0);
+  color: rgb(36, 36, 36);
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.15em;
+  text-align: justify;
+  letter-spacing:  -0.06px;
+  text-rendering: optimizelegibility;
+  line-height: 32px;
+  padding: 100px 25vw;
+
+
+  
+}
+
+
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #content {
+    display: block;
+    height: auto;
+    background-color: var(--color0);
+  
+    padding: 50px 25vw;
+  }
+}
